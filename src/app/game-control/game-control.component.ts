@@ -7,7 +7,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
-  @Output() intervalStarted = new EventEmitter<number>(); // @Output - so it can be caught outside this component; intervalStarted is the event name, since there is no alias
+  @Output() intervalStarted = new EventEmitter<number>(); // @Output - so it can be caught outside this component;
+                                                          // intervalStarted is the event name, since there is no alias
   interval;
   num = 0;
 
