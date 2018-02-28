@@ -17,7 +17,15 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-game-control></app-game-control>
+      <app-game-control (intervalStarted)="onIntervalStarted($event)"></app-game-control> <!-- $event gives us access to the event data, which is the number in this case -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-1">
+      <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+    </div>
+    <div class="col-xs-1">
+      <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
     </div>
   </div>
 </div>
